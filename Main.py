@@ -40,7 +40,7 @@ class BlackjackAgent:
             return env.action_space.sample()
         else:
             #Q-value function is used to estimate the optimal action to take in each state
-            return int(np.argmax(self.q_value[obs]))
+            return int(np.argmax(self.q_values[obs]))
 
     # Update the Q-value of actions
     def update(self, obs, action, reward, terminated, next_obs):
